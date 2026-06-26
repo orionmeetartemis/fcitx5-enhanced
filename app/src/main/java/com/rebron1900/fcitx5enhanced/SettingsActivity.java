@@ -116,14 +116,6 @@ public class SettingsActivity extends Activity {
         swRight.setOnClickListener(switchListener);
         swKeyBorder.setOnClickListener(switchListener);
 
-        // 原版无 RECORD_AUDIO 权限，禁用语音开关
-        String pkg = getPackageName();
-        if ("org.fcitx.fcitx5.android".equals(pkg)) {
-            swVoice.setEnabled(false);
-            swVoice.setChecked(false);
-            swVoice.setAlpha(0.4f);
-        }
-
         // === Sync tab controls ===
         swSyncEnabled = findViewById(R.id.sw_sync_enabled);
         spinnerSyncDir = findViewById(R.id.spinner_sync_dir);
